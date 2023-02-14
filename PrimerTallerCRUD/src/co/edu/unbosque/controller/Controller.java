@@ -3,24 +3,37 @@ package co.edu.unbosque.controller;
 import co.edu.unbosque.model.EmployeeCRUD;
 import co.edu.unbosque.view.View;
 
+/**
+ * Esta clase une la logica de los candidatos con la interaccion del usuario
+ * @author: Esteban Uribe Calderon
+ * @version: 12/02/2023
+ */
 public class Controller {
-	
+	//Variables de la clase
 	private EmployeeCRUD emp;
 	private View view;
 	
-	
+	 /**
+     * Constructor para la interaccion de los candidatos y de la vista
+     */
 	public Controller() {
 		emp = new EmployeeCRUD();
 		view = new View();
 		run();
-	}
+	}//cierre del constructor
 	
+	 /**
+     * Metodo funcionar del programa
+     */
 	public void run() {
 		menu();
 		
-	}
+	}//cierre del método
 	
-	private void menu() {
+	 /**
+     * Metodo que despliega el menu y su logica de interacción y manipulación de los candidatos
+     */
+	public void menu() {
 		
 		String option = view.readInfo("\n \nIngresa la opción: "
 									 + "\n1. Agregar Candidato "
@@ -133,6 +146,6 @@ public class Controller {
 		
 		
 		
-	}
+	}//Cierre del metodo
 
-}
+}//Cierre de la clase
